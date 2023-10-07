@@ -109,14 +109,11 @@ image: https://raw.githubusercontent.com/Nanguage/slides-deeplearning-microscopy
   - CARE (Content-aware image restoration)
   - Self-Net
   - ...
-+ Object detection
++ Higher level tasks
+  - Classification
   - Cell segmentation
-    * Cellpose
-    * StarDist
-    * ...
+  - Cell tracking
   - FISH spot detection
-    * DeepBlink
-    * U-FISH
 
 ---
 layout: center
@@ -300,6 +297,29 @@ Self-Net that significantly improves the resolution of axial images by using the
 </div>
 
 [^1]: Ning, Kefu, et al. "Deep self-learning enables fast, high-fidelity isotropic resolution restoration for volumetric fluorescence microscopy." Light: Science & Applications 12.1 (2023): 204.
+
+---
+layout: center
+class: text-center
+---
+
+# Higher level tasks
+
+---
+level: 2
+---
+
+# Classification
+
+Human Protein Atlas Image Classification Challenge[^1]
+
+
+<div style="display: flex; gap: 50px; justify-content: center">
+  <img src="/statics/img/hpa-1.webp" style="height: 300px"/>
+  <img src="/statics/img/hpa-2.webp" style="height: 300px"/>
+</div>
+
+[^1]: Ouyang, Wei, et al. "Analysis of the human protein atlas image classification competition." Nature methods 16.12 (2019): 1254-1261.
 
 ---
 layout: center
