@@ -12,14 +12,16 @@ info: |
   Learn more at [Sli.dev](https://sli.dev)
 drawings:
   persist: false
-transition: slide-left
 title: Deep learning in microscopy
 mdc: true
+hideInToc: true
 ---
 
 # Deep learning in microscopy
 
 Deep Learning (DL) methods are powerful analytical tools for microscopy.
+
+Weize Xu, HZAU · 2023.10
 
 <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
@@ -31,7 +33,7 @@ Deep Learning (DL) methods are powerful analytical tools for microscopy.
   <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
     <carbon:edit />
   </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub"
+  <a href="https://github.com/Nanguage/slide-deeplearning-microscopy" target="_blank" alt="GitHub"
     class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
     <carbon-logo-github />
   </a>
@@ -43,12 +45,12 @@ The last comment block of each slide will be treated as slide notes. It will be 
 
 ---
 layout: default
-transition: fade-out
+hideInToc: true
 ---
 
 # Table of contents
 
-<Toc maxDepth="3"></Toc>
+<Toc maxDepth="2" columns="2"></Toc>
 
 ---
 layout: center
@@ -56,6 +58,24 @@ class: text-center
 ---
 
 # Introduction
+
+---
+level: 2
+layout: default
+---
+
+# What and Why
+
+<div style="display:flex;gap:40px">
+<img src="statics/img/dl_img_proc.webp" style="width: 300px"/>
+<img src="statics/img/dl_img_proc2.webp" style="width: 460px"/>
+</div>
+
++ Performance: Deep learning outperforms traditional methods in many tasks.
++ Learn from data: no need to design features, get rid of the human bias.
++ Generalization: DL models can be applied to different datasets without parameter tuning.
+
+<img src="statics/img/ml_vs_prog.png" style="width: 600px"/>
 
 ---
 level: 2
@@ -76,7 +96,6 @@ image: statics/img/DNN.png
 + Self-supervised learning
   - Masked autoencoder (MAE)
 
-
 ---
 level: 2
 layout: image-right
@@ -85,7 +104,8 @@ image: statics/img/Deep_learning_in_microscopy.jpg
 
 # Applications of DL in microscopy
 
-+ Image restoration
++ Image reconstruction
+  - ANNA-PALM
   - CARE (Content-aware image restoration)
   - Self-Net
   - ...
@@ -99,20 +119,141 @@ image: statics/img/Deep_learning_in_microscopy.jpg
     * U-FISH
 
 ---
-layout: default
+layout: center
+class: text-center
+---
+
+# Background about the DL for CV
+
+---
+level: 2
+layout: two-cols-header
 ---
 
 # Convolutional neural networks (CNN)
 
+<img src="statics/img/Typical_cnn.png" style="width: 600px"/>
+
++ Local receptive fields
++ Parameter sharing
+
+::left::
+
+<img src="statics/img/imgnet.jpg"/>
+
+::right::
+
+<img src="statics/img/imgnet-top5.png"/>
+
 ---
 level: 2
 layout: default
-transition: fade-out
 ---
 
-# Image-to-image models
+# Image-to-image model
 
 U-Net architecture
+
+<img src="statics/img/unet1.png" style="width: 600px"/>
+
+---
+level: 2
+layout: default
+---
+
+# Generative models
+
+<div style="display: flex; gap: 20px">
+  <div>
+    <img src="statics/img/gen_models.png" style="height: 300px"/>
+    <p>Generative models</p>
+  </div>
+  <div>
+    <div>
+      <img src="statics/img/pix2pix-1.png" style="width: 400px"/>
+      <p>Pix2pix based on GAN[1]</p>
+    </div>
+    <div>
+      <img src="statics/img/diffusion.png" style="width: 400px"/>
+      <p>Text to image generation</p>
+    </div>
+  </div>
+</div>
+
+<p style="height: 20px"></p>
+
+\[1\]: Isola, Phillip, et al. "Image-to-image translation with conditional adversarial networks. arXiv e-prints." arXiv preprint arXiv:1611.07004 (2016).
+
+---
+level: 2
+layout: default
+---
+
+# CycleGAN
+
+Unpaired image-to-image translation[^1].
+
+<img src="statics/img/cyclegan-1.png" style="height: 160px"/>
+<img src="statics/img/cyclegan-2.png" style="height: 150px"/>
+
+[^1]: Zhu, Jun-Yan, et al. "Unpaired image-to-image translation using cycle-consistent adversarial networks." Proceedings of the IEEE international conference on computer vision. 2017.
+
+---
+level: 2
+layout: default
+---
+
+# Vision Transformer (ViT)
+
+<style>
+  .footnotes p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+</style>
+
+Transformers were introduced in 2017,[^1] and have found widespread use in Natural Language Processing. In 2020, they were adapted for computer vision, yielding ViT.[^2]
+
+<div style="display: flex; gap: 20px">
+  <div>
+    <img src="statics/img/transformers.png" style="width: 500px"/>
+    <p>Transformer in NLP</p>
+  </div>
+  <div>
+    <img src="statics/img/Vision_Transformer.gif" style="width: 500px"/>
+    <p>Vision Transformer</p>
+  </div>
+</div>
+
+[^1]: Vaswani, Ashish, et al. "Attention is all you need." Advances in neural information processing systems 30 (2017).
+[^2]: Dosovitskiy, Alexey, et al. "An image is worth 16x16 words: Transformers for image recognition at scale." arXiv preprint arXiv:2010.11929 (2020).
+---
+layout: center
+class: text-center
+---
+
+# Microscopy image reconstruction
+
+---
+level: 2
+layout: default
+---
+
+# ANNA-PALM
+
+---
+level: 2
+layout: default
+---
+
+# Content-aware image restoration (CARE)
+
+---
+level: 2
+layout: default
+---
+
+# Self-Net
 
 ---
 layout: center
@@ -120,4 +261,92 @@ class: text-center
 ---
 
 # Plantforms for DL application in microscopy
+
+---
+level: 2
+layout: default
+---
+
+# ImJoy
+
+---
+level: 2
+layout: default
+---
+
+# BioImage.IO
+
+---
+level: 2
+layout: default
+---
+
+# ZeroCostDL4Mic
+
+
+---
+layout: center
+class: text-center
+---
+
+# Perspectives
+
+---
+level: 2
+layout: default
+---
+
+# Large self-supervised learning models
+
+---
+level: 2
+layout: default
+---
+
+# Multi-modality
+
+---
+level: 2
+layout: default
+class: text-center
+---
+
+# Launguage UI based on Large Language Models(LLM)
+
+Complex GUI -> A simple dialog
+
+<div style="display: flex; justify-content: center">
+  <img src="statics/img/Software-UI-and-Codex.png" style="width: 650px"/>
+</div>
+
+---
+level: 3
+layout: two-cols
+---
+
+
+# Codex notebook
+
+<iframe width="400" height="315" src="https://www.youtube.com/embed/pkOp_oUybsc?si=PL9BSPu1aDvIpzMB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+https://aicell.io/project/codex-chat-notebook/
+
+::right::
+
+# Napari-ChatGPT
+
+<video src="https://user-images.githubusercontent.com/1870994/235768559-ca8bfa84-21f5-47b6-b2bd-7fcc07cedd92.mp4" data-canonical-src="https://user-images.githubusercontent.com/1870994/235768559-ca8bfa84-21f5-47b6-b2bd-7fcc07cedd92.mp4" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="width:400; width: 315">
+</video>
+
+https://github.com/royerlab/napari-chatgpt
+
+---
+layout: cover
+class: text-center
+hideInToc: true
+---
+
+# Thank you for your attention!
+
+Please feel free to contact me if you have any questions.
 
