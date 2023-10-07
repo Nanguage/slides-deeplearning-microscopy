@@ -1,7 +1,7 @@
 ---
 theme: seriph
 #background: https://source.unsplash.com/collection/94734566/1920x1080
-background: statics/img/ai_and_microscopy.jpg
+background: /statics/img/ai_and_microscopy.jpg
 class: text-center
 highlighter: shiki
 lineNumbers: false
@@ -67,20 +67,20 @@ layout: default
 # What and Why
 
 <div style="display:flex;gap:40px">
-<img src="statics/img/dl_img_proc.webp" style="width: 300px"/>
-<img src="statics/img/dl_img_proc2.webp" style="width: 460px"/>
+<img src="/statics/img/dl_img_proc.webp" style="width: 300px"/>
+<img src="/statics/img/dl_img_proc2.webp" style="width: 460px"/>
 </div>
 
 + Performance: Deep learning outperforms traditional methods in many tasks.
 + Learn from data: no need to design features, get rid of the human bias.
 + Generalization: DL models can be applied to different datasets without parameter tuning.
 
-<img src="statics/img/ml_vs_prog.png" style="width: 600px"/>
+<img src="/statics/img/ml_vs_prog.png" style="width: 600px"/>
 
 ---
 level: 2
 layout: image-right
-image: statics/img/DNN.png
+image: /statics/img/DNN.png
 ---
 
 # Deep learning techniques for Computer Vision(CV)
@@ -99,7 +99,7 @@ image: statics/img/DNN.png
 ---
 level: 2
 layout: image-right
-image: statics/img/Deep_learning_in_microscopy.jpg
+image: /statics/img/Deep_learning_in_microscopy.jpg
 ---
 
 # Applications of DL in microscopy
@@ -132,18 +132,18 @@ layout: two-cols-header
 
 # Convolutional neural networks (CNN)
 
-<img src="statics/img/Typical_cnn.png" style="width: 600px"/>
+<img src="/statics/img/Typical_cnn.png" style="width: 600px"/>
 
 + Local receptive fields
 + Parameter sharing
 
 ::left::
 
-<img src="statics/img/imgnet.jpg"/>
+<img src="/statics/img/imgnet.jpg"/>
 
 ::right::
 
-<img src="statics/img/imgnet-top5.png"/>
+<img src="/statics/img/imgnet-top5.png"/>
 
 ---
 level: 2
@@ -154,7 +154,7 @@ layout: default
 
 U-Net architecture
 
-<img src="statics/img/unet1.png" style="width: 600px"/>
+<img src="/statics/img/unet1.png" style="width: 600px"/>
 
 ---
 level: 2
@@ -165,16 +165,16 @@ layout: default
 
 <div style="display: flex; gap: 20px">
   <div>
-    <img src="statics/img/gen_models.png" style="height: 300px"/>
+    <img src="/statics/img/gen_models.png" style="height: 300px"/>
     <p>Generative models</p>
   </div>
   <div>
     <div>
-      <img src="statics/img/pix2pix-1.png" style="width: 400px"/>
+      <img src="/statics/img/pix2pix-1.png" style="width: 400px"/>
       <p>Pix2pix based on GAN[1]</p>
     </div>
     <div>
-      <img src="statics/img/diffusion.png" style="width: 400px"/>
+      <img src="/statics/img/diffusion.png" style="width: 400px"/>
       <p>Text to image generation</p>
     </div>
   </div>
@@ -193,8 +193,8 @@ layout: default
 
 Unpaired image-to-image translation[^1].
 
-<img src="statics/img/cyclegan-1.png" style="height: 160px"/>
-<img src="statics/img/cyclegan-2.png" style="height: 150px"/>
+<img src="/statics/img/cyclegan-1.png" style="height: 160px"/>
+<img src="/statics/img/cyclegan-2.png" style="height: 150px"/>
 
 [^1]: Zhu, Jun-Yan, et al. "Unpaired image-to-image translation using cycle-consistent adversarial networks." Proceedings of the IEEE international conference on computer vision. 2017.
 
@@ -216,11 +216,11 @@ Transformers were introduced in 2017,[^1] and have found widespread use in Natur
 
 <div style="display: flex; gap: 20px">
   <div>
-    <img src="statics/img/transformers.png" style="width: 500px"/>
+    <img src="/statics/img/transformers.png" style="width: 500px"/>
     <p>Transformer in NLP</p>
   </div>
   <div>
-    <img src="statics/img/Vision_Transformer.gif" style="width: 500px"/>
+    <img src="/statics/img/Vision_Transformer.gif" style="width: 500px"/>
     <p>Vision Transformer</p>
   </div>
 </div>
@@ -316,7 +316,7 @@ class: text-center
 Complex GUI -> A simple dialog
 
 <div style="display: flex; justify-content: center">
-  <img src="statics/img/Software-UI-and-Codex.png" style="width: 650px"/>
+  <img src="/statics/img/Software-UI-and-Codex.png" style="width: 650px"/>
 </div>
 
 ---
