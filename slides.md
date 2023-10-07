@@ -1,7 +1,7 @@
 ---
 theme: seriph
 #background: https://source.unsplash.com/collection/94734566/1920x1080
-background: /statics/img/ai_and_microscopy.jpg
+background: https://raw.githubusercontent.com/Nanguage/slides-deeplearning-microscopy/main/statics/img/ai_and_microscopy.jpg
 class: text-center
 highlighter: shiki
 lineNumbers: false
@@ -80,7 +80,7 @@ layout: default
 ---
 level: 2
 layout: image-right
-image: /statics/img/DNN.png
+image: https://raw.githubusercontent.com/Nanguage/slides-deeplearning-microscopy/main/statics/img/DNN.png
 ---
 
 # Deep learning techniques for Computer Vision(CV)
@@ -99,7 +99,7 @@ image: /statics/img/DNN.png
 ---
 level: 2
 layout: image-right
-image: /statics/img/Deep_learning_in_microscopy.jpg
+image: https://raw.githubusercontent.com/Nanguage/slides-deeplearning-microscopy/main/statics/img/Deep_learning_in_microscopy.jpg
 ---
 
 # Applications of DL in microscopy
@@ -241,6 +241,15 @@ layout: default
 
 # ANNA-PALM
 
+The drastic reduction in acquisition time and sample irradiation afforded by ANNA-PALM enables faster and gentler high-throughput and live-cell super-resolution imaging.[^1]
+
+<div style="display: flex; gap: 10px">
+<img src="/statics/img/anna-palm-1.webp" style="height: 300px"/>
+<img src="/statics/img/anna-palm-2.webp" style="width: 500px"/>
+</div>
+
+[^1]: Ouyang, Wei, et al. "Deep learning massively accelerates super-resolution localization microscopy." Nature biotechnology 36.5 (2018): 460-468.
+
 ---
 level: 2
 layout: default
@@ -248,12 +257,49 @@ layout: default
 
 # Content-aware image restoration (CARE)
 
+Content-aware image restoration(CARE) based on deep learning extends the range of biological phenomena observable by microscopy.[^1] Software: 
+https://github.com/CSBDeep/CSBDeep
+
+<div style="display: flex; gap: 50px; justify-content: center">
+  <img src="/statics/img/care-1.webp" style="height: 320px"/>
+  <img src="/statics/img/care-2.webp" style="height: 320px"/>
+</div>
+
+[^1]: Weigert, Martin, et al. "Content-aware image restoration: pushing the limits of fluorescence microscopy." Nature methods 15.12 (2018): 1090-1097.
+
+---
+level: 3
+---
+
+# CARE application: Thick tissue MERFISH
+
+Enable three-dimensional (3D) single-cell transcriptome imaging of thick tissue 
+specimens by integrating MERFISH with confocal microscopy for optical sectioning and 
+deep learning for increasing imaging speed and quality.[^1]
+
+<div style="display: flex; gap: 50px; justify-content: center">
+  <img src="/statics/img/care-merfish-1.png" style="height: 300px"/>
+  <img src="/statics/img/care-merfish-2.png" style="height: 300px"/>
+</div>
+
+[^1]: Fang, Rongxin, et al. "Three-dimensional single-cell transcriptome imaging of thick tissues." bioRxiv (2023): 2023-07.
+
 ---
 level: 2
 layout: default
 ---
 
+
 # Self-Net
+
+Self-Net that significantly improves the resolution of axial images by using the lateral images from the same raw dataset as rational targets. By incorporating unsupervised learning for realistic anisotropic degradation and supervised learning for high-fidelity isotropic recovery.[^1]
+
+<div style="display: flex; gap: 50px; justify-content: center">
+  <img src="/statics/img/self-net-1.png" style="height: 300px"/>
+  <img src="/statics/img/self-net-2.webp" style="height: 300px"/>
+</div>
+
+[^1]: Ning, Kefu, et al. "Deep self-learning enables fast, high-fidelity isotropic resolution restoration for volumetric fluorescence microscopy." Light: Science & Applications 12.1 (2023): 204.
 
 ---
 layout: center
