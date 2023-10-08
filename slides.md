@@ -468,6 +468,18 @@ layout: default
 
 # Multi-modality
 
+Integrate data from multiple different modalities: cell morphology, transcriptome, electrophysiology...
+
+Examples of multimodal learning in the fields of NLP and CV:
+
+* ImageBind: The first AI model capable of binding data from six modalities at once, without the need for explicit supervision. https://imagebind.metademolab.com/
+* Any-to-Any multimodal LLM: https://next-gpt.github.io/
+
+<div style="display: flex; gap: 20px">
+  <img src="https://next-gpt.github.io/static/images/framework.png" style="width: 500px" />
+  <img src="https://user-images.githubusercontent.com/8495451/236859695-ffa13364-3e39-4d99-a8da-fbfab17f9a6b.gif" style="width:330px;" />
+</div>
+
 ---
 level: 2
 layout: default
