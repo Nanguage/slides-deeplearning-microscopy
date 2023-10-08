@@ -40,6 +40,11 @@ Weize Xu, HZAU · 2023.10
 </div>
 
 <!--
+left bottom corner show the image source:
+Cover image made with DALLE·3
+-->
+
+<!--
 The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
 -->
 
@@ -114,6 +119,7 @@ image: https://raw.githubusercontent.com/Nanguage/slides-deeplearning-microscopy
   - Cell segmentation
   - Cell tracking
   - FISH spot detection
+  - ...
 
 ---
 layout: center
@@ -322,6 +328,67 @@ Human Protein Atlas Image Classification Challenge[^1]
 [^1]: Ouyang, Wei, et al. "Analysis of the human protein atlas image classification competition." Nature methods 16.12 (2019): 1254-1261.
 
 ---
+level: 2
+---
+
+# Cell segmentation
+
+<style>
+  .footnotes p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+</style>
+
+Cellpose is a generalist, deep learning-based segmentation method, which can precisely segment cells from a wide range of image types and does not require model retraining or parameter adjustments. [^1] The Multi-modality Cell Segmentation Challenge: Comprising over 1500 labeled images derived from more than 50 diverse biological experiments. [^2]
+
+<div style="display: flex; gap: 50px; justify-content: center">
+  <img src="/statics/img/cellpose-1.webp" style="height: 240px"/>
+  <img src="/statics/img/cell_seg_comp1.png" style="height: 240px"/>
+</div>
+
+
+[^1]: Stringer, Carsen, et al. "Cellpose: a generalist algorithm for cellular segmentation." Nature methods 18.1 (2021): 100-106.
+[^2]: Ma, Jun, et al. "The Multi-modality Cell Segmentation Challenge: Towards Universal Solutions." arXiv preprint arXiv:2308.05864 (2023).
+
+---
+level: 2
+---
+
+# Cell tracking
+
+LIM Tracker[^1]
+
+<div style="display: flex; gap: 50px; justify-content: center">
+  <img src="/statics/img/LIM_tracker-1.webp" style="height: 300px"/>
+  <img src="/statics/img/LIM_tracker-2.webp" style="height: 300px"/>
+</div>
+
+[^1]: Aragaki, Hideya, et al. "LIM Tracker: a software package for cell tracking and analysis with advanced interactivity." Scientific Reports 12.1 (2022): 2702.
+
+---
+level: 2
+layout: two-cols-header
+---
+
+# FISH spot detection
+
+U-FISH is an advanced FISH spot calling algorithm based on deep learning(Unpublished).
+Software: https://github.com/UFISH-Team/U-FISH
+
+1. Diverse dataset: 4000+ images with approximately 1.6 million targets from seven sources.
+2. Small network: archiving state-of-the-art performance with only 160k parameters, 680kB ONNX file.
+3. 3D support: Support FISH spot detection on 3D images.
+4. Support for large-scale data storage formats such as OME-Zarr and N5.
+5. User-friendly interface: API, CLI, Napari plugin, ImJoy plugin.
+
+::left::
+<img src="/statics/img/ufish.png" style="height: 220px"/>
+::right::
+<img src="/statics/img/ufish-bench.png" style="height: 240px"/>
+
+
+---
 layout: center
 class: text-center
 ---
@@ -330,17 +397,32 @@ class: text-center
 
 ---
 level: 2
-layout: default
+layout: iframe-right
+url: https://imjoy.io/#/app
 ---
 
 # ImJoy
 
+ImJoy is a plugin powered hybrid computing platform for deploying deep learning applications such as advanced image analysis tools. [^1]
+Website: https://imjoy.io/#/
+
+<img src="/statics/img/ImJoy.webp" style="height: 220px"/>
+
+[^1]: Ouyang, Wei, et al. "ImJoy: an open-source computational platform for the deep learning era." Nature methods 16.12 (2019): 1199-1200.
+
 ---
 level: 2
-layout: default
+layout: iframe-right
+url: https://bioimage.io/#/
 ---
 
 # BioImage.IO
+
+BioImage.IO: building AI-powered bioimage analysis model zoo. [^1] Website: https://bioimage.io/#/
+
+<img src="/statics/img/model-zoo.png" style="height: 220px"/>
+
+[^1]: Ouyang, Wei, et al. "Bioimage model zoo: a community-driven resource for accessible deep learning in bioimage analysis." bioRxiv (2022): 2022-06.
 
 ---
 level: 2
@@ -349,6 +431,14 @@ layout: default
 
 # ZeroCostDL4Mic
 
+ZeroCostDL4Mic is a collection of self-explanatory Jupyter Notebooks for Google Colab that features an easy-to-use graphical user interface. [^1]  Software: https://github.com/HenriquesLab/ZeroCostDL4Mic
+
+<div style="display: flex; gap: 50px; justify-content: center">
+  <img src="/statics/img/ZeroCostDL4Mic-1.webp" style="height: 300px"/>
+  <img src="/statics/img/ZeroCostDL4Mic-2.webp" style="height: 300px"/>
+</div>
+
+[^1]: von Chamier, Lucas, et al. "Democratising deep learning for microscopy with ZeroCostDL4Mic." Nature communications 12.1 (2021): 2276.
 
 ---
 layout: center
@@ -410,6 +500,7 @@ https://github.com/royerlab/napari-chatgpt
 layout: cover
 class: text-center
 hideInToc: true
+background: https://raw.githubusercontent.com/Nanguage/slides-deeplearning-microscopy/main/statics/img/ai_and_microscopy5.jpg
 ---
 
 # Thank you for your attention!
