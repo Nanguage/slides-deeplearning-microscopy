@@ -452,7 +452,14 @@ level: 2
 layout: default
 ---
 
-# Large self-supervised learning models
+# Large zero-shot learning models
+
+Segment Anything Model (SAM) is a new AI model from Meta AI that can "cut out" any object.[^1]
+Imagine a large model that can help you perform various image processing tasks, such as asking it to "segment cells" or "denoise an image"...
+
+<img src="/statics/img/sam.png" style="height: 280px"/>
+
+[^1]: Kirillov, Alexander, et al. "Segment anything." arXiv preprint arXiv:2304.02643 (2023).
 
 ---
 level: 2
